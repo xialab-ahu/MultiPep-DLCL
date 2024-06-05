@@ -15,22 +15,41 @@ In this work, the MultiPep-DLCL model is proposed to predict MFTP. This work has
 | FILE NAME         | DESCRIPTION                                            |
 |:------------------|:-------------------------------------------------------|
 | main.py           | the main file of MutiPep-DLCL recognizer               |
-| train.py          | train model                                            |
+| train.py          | train and predict model                                |
 | models            | model construction                                     |
 | DataLoad.py       | data reading and encoding                              |
 | loss_functions.py | loss functions used to train models                    |
 | evaluation.py     | evaluation metrics (for evaluating prediction results) |
-| dataset           | data                                                   |
+| dataset           | data:text.txt is for test set,train.txt is train set   |
 | result            | Models and results preserved during training.          |
-| config            | Model parameters                                       |
+| config            | Some of the defined model parameters                                       |
 
-## Requirements
 
-The environment is based on:<br />
-`pytorch=1.12.1=py3.9_cuda10.2`<br />
-`numpy ==1.26.2`<br />
-`pandas==1.2.4`.<br />
+## Installation
 
+
+- Requirements<br />
+OS：
+  
+  - `Windows` ：Windows10 or later
+  
+  - `Linux`：Ubuntu 16.04 LTS or later<br />
+
+  python: 
+  
+   Our code runs in the following corresponding versions of the python library, please make sure your environment is compatible with our version: <br />
+  `pytorch=1.12.1=py3.9.16_cuda11.6`<br />
+  `numpy ==1.26.2`<br />
+  `pandas==1.2.4`<br />
+- Download `MutiPep-DLCL`to your computer
+  ```bash
+  git clone https://github.com/xialab-ahu/MultiPep-DLCL
+  ```
+## Training and test MutiPep-DLCL model
+```shell
+cd "./MutiPep-DLCL"
+python main.py
+```
 
 ## Contact
 Please feel free to contact us if you need any help.

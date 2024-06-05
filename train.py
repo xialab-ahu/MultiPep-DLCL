@@ -1,13 +1,14 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # @Time : 2024/5/16 14:35
-# @Author : LT
+# @Author : lt,fhh
 # @FileName: __init__.py.py
 # @Software: PyCharm
 import time
 import math
 from torch.optim import lr_scheduler
-
+import torch
+import numpy as np
 class DataTrain:
 
     def __init__(self, model, optimizer, criterion, scheduler=None, device="cuda"):
@@ -101,10 +102,3 @@ def predict(model, data, device="cuda"):
 
     return np.array(predictions), np.array(labels)
 
-import numpy as np
-import pandas as pd
-import torch
-
-print("NumPy 版本:", np.__version__)
-print("Pandas 版本:", pd.__version__)
-print("PyTorch 版本:", torch.__version__)

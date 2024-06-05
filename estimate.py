@@ -1,11 +1,11 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # @Time : 2024/5/16 14:35
-# @Author : LT
+# @Author : lt,fhh
 # @FileName: __init__.py.py
 # @Software: PyCharm
 
-# 多标签评价指标
+
 def Aiming(y_hat, y):
     """
     the “Aiming” rate (also called “Precision”) is to reflect the average ratio of the
@@ -112,7 +112,6 @@ def AbsoluteFalse(y_hat, y):
 
 
 def evaluate(score_label, y, threshold=0.6):
-    # 将预测概率分数转为标签
     if threshold is None:
         threshold = [0.8, 0.5, 0.7, 0.6, 0.3, 0.3, 0.5, 0.7, 0.8, 0.7, 0.2, 0.9, 0.7, 0.8, 0.5, 0.7, 0.6, 0.8, 0.7, 0.7, 0.9]
 
@@ -131,7 +130,6 @@ def evaluate(score_label, y, threshold=0.6):
     #     M = matthews_corrcoef(y[:, k], y_hat[:, k])
     #     MCC.append(M)
 
-    # 评估模型
     aiming = Aiming(y_hat, y)
     coverage = Coverage(y_hat, y)
     accuracy = Accuracy(y_hat, y)
